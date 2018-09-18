@@ -1,0 +1,19 @@
+﻿<Window x:Class="Exceptions.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Exceptions"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button Content="Trying and catching in the same method" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="575" Click="Button_Click_1"/>
+        <Button Content="Trying and catching in the same method, in-order" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Width="575" Click="Button_Click_2"/>
+        <Button Content="Trying and catching in the same method, with exceptions that don't match" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="575" Click="Button_Click_3"/>
+        <Button Content="Catching an exception in one method from a different method" HorizontalAlignment="Left" Margin="10,118,0,0" VerticalAlignment="Top" Width="575" Click="Button_Click_4"/>
+        <Button Content="Catching an exception that has passed through two different methods" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="575" Click="Button_Click_5"/>
+        <Button Content="Throwing and catching an exception that we created ourselves" HorizontalAlignment="Left" Margin="10,173,0,0" VerticalAlignment="Top" Width="575" Click="Button_Click_6"/>
+        <Button Content="Not catching an exception" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="575" Click="Button_Click"/>
+        <Button Content="Being unable to catch an exception, even if we try and catch correctly" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="575" Click="Button_Click_7"/>
+    </Grid>
+</Window>

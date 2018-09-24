@@ -1,0 +1,32 @@
+﻿HWG1
+# a line starting with '#' is a comment.
+Place W
+# the '*' instruction says: this is where the player starts off.
+*
+# a tile is only placed in the spot after a directional instruction is used to go to the next spot.
+TopRight 1
+Place G
+Up 3
+Place W
+Up 1
+BottomRight 2
+Place G
+BottomRight 7
+BottomLeft 8
+Place W
+BottomLeft 1
+Up 2
+Place G
+Up 2
+TopRight 3
+BottomRight 2
+BottomLeft 3
+Place W
+Up 1
+Place G
+TopRight 1
+TopLeft 1
+Place ?
+Up 1
+Place W
+Up 1

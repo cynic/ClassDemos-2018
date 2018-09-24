@@ -1,0 +1,21 @@
+﻿<Window x:Class="Hexahop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hexahop"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="11,498,0,5.8" TextWrapping="Wrap" Width="769"><Run Text="Image credit: "/><Run Text="Cat by Denis Sazhin from the Noun Project"/><Run Text=";"/><Run Text=" CC-BY"/></TextBlock>
+        <Canvas x:Name="myCanvas" Margin="10,10,9.6,27" MouseDown="myCanvas_MouseDown">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF05BED1" Offset="0"/>
+                    <GradientStop Color="#FF006CE5" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+
+    </Grid>
+</Window>

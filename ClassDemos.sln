@@ -10,6 +10,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{06D83F1B-46D2-484C-9197-A274F7CF8404}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hexahop", "Hexahop\Hexahop.csproj", "{2EBEE34A-CE27-4B6A-AA66-9122BD16FDDB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WithClass", "WithClass\WithClass.csproj", "{BA52B775-D0E7-4D44-9A1B-9103E6A6F32B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +30,17 @@ Global
 		{06D83F1B-46D2-484C-9197-A274F7CF8404}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06D83F1B-46D2-484C-9197-A274F7CF8404}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06D83F1B-46D2-484C-9197-A274F7CF8404}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{2EBEE34A-CE27-4B6A-AA66-9122BD16FDDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2EBEE34A-CE27-4B6A-AA66-9122BD16FDDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EBEE34A-CE27-4B6A-AA66-9122BD16FDDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EBEE34A-CE27-4B6A-AA66-9122BD16FDDB}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{BA52B775-D0E7-4D44-9A1B-9103E6A6F32B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA52B775-D0E7-4D44-9A1B-9103E6A6F32B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA52B775-D0E7-4D44-9A1B-9103E6A6F32B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA52B775-D0E7-4D44-9A1B-9103E6A6F32B}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> 564e1c0c770d72333cec65f34a836b13f3e87627
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

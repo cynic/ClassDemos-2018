@@ -35,9 +35,14 @@ namespace Dictionaries {
             output.Text += "Loaded file: " + ofd.FileName + "\n";
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e) {
-            char[] punctuation = new[] { ' ', ';', '.', ':', ',', '\r', '\n', '\'', '"', '!', '?', '‘', '-', '(', ')', '[', ']' };
-            string[] splits = fileText.ToLower().Split(punctuation, StringSplitOptions.RemoveEmptyEntries);
+        private Dictionary<string,int> WordFrequency() {
+            if (fileText == null) {
+                throw new InvalidOperationException("You must load a file first.");
+            }
+            string t = fileText.ToLower();
+            string unwanted = " 0123456789!\"#$%&()*+,-./:;<=>?@[]^_`{|}~'\\;\r\n‘’";
+            char[] delims = unwanted.ToCharArray();
+            string[] splits = t.Split(delims, StringSplitOptions.RemoveEmptyEntries);
             Dictionary<string, int> counts = new Dictionary<string, int>();
             // count word frequencies.
             foreach (string word in splits) {
@@ -47,10 +52,35 @@ namespace Dictionaries {
                     counts[word] = 1;
                 }
             }
+            return counts;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e) {
+            Dictionary<string, int> frequency = WordFrequency();
             // now print it out.
-            foreach (string k in counts.Keys) {
-                output.Text += String.Format("{0}: {1}\n", k, counts[k]);
+            string to_print = "";
+            foreach (string k in frequency.Keys) {
+                to_print += String.Format("{0}: {1}\n", k, frequency[k]);
             }
+            output.Text = to_print;
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e) {
+            Dictionary<string, int> frequency = WordFrequency();
+            Dictionary<int, List<string>> inv = new Dictionary<int, List<string>>();
+            foreach (KeyValuePair<string, int> kvp in frequency) {
+                if (!inv.ContainsKey(kvp.Value)) {
+                    inv[kvp.Value] = new List<string>();
+                }
+                inv[kvp.Value].Add(kvp.Key);
+            }
+            // some output now.
+            string to_print = "";
+            foreach (int n in inv.Keys) {
+                string joined = String.Join(", ", inv[n]);
+                to_print += String.Format("{0}: {1}\n", n, joined);
+            }
+            output.Text = to_print;
         }
     }
 }
